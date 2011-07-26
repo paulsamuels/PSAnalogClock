@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E1942F9D13DF762C0044F6CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1942F9C13DF762C0044F6CD /* UIKit.framework */; };
+		E1942F9F13DF762C0044F6CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1942F9E13DF762C0044F6CD /* Foundation.framework */; };
+		E1942FA113DF762C0044F6CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1942FA013DF762C0044F6CD /* CoreGraphics.framework */; };
+		E1942FA713DF762C0044F6CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1942FA513DF762C0044F6CD /* InfoPlist.strings */; };
+		E1942FA913DF762C0044F6CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1942FA813DF762C0044F6CD /* main.m */; };
+		E1942FAD13DF762C0044F6CD /* AnalogClockWithImagesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1942FAC13DF762C0044F6CD /* AnalogClockWithImagesAppDelegate.m */; };
+		E1942FB013DF762C0044F6CD /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1942FAE13DF762C0044F6CD /* MainWindow.xib */; };
+		E1942FB313DF762C0044F6CD /* AnalogClockWithImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1942FB213DF762C0044F6CD /* AnalogClockWithImagesViewController.m */; };
+		E1942FB613DF762C0044F6CD /* AnalogClockWithImagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1942FB413DF762C0044F6CD /* AnalogClockWithImagesViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E1942F9813DF762C0044F6CD /* AnalogClockWithImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalogClockWithImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1942F9C13DF762C0044F6CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E1942F9E13DF762C0044F6CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E1942FA013DF762C0044F6CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E1942FA413DF762C0044F6CD /* AnalogClockWithImages-Info.plist */ = {isa = PBXFileReference; path = "AnalogClockWithImages-Info.plist"; sourceTree = "<group>"; };
+		E1942FA613DF762C0044F6CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E1942FA813DF762C0044F6CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E1942FAA13DF762C0044F6CD /* AnalogClockWithImages-Prefix.pch */ = {isa = PBXFileReference; path = "AnalogClockWithImages-Prefix.pch"; sourceTree = "<group>"; };
+		E1942FAB13DF762C0044F6CD /* AnalogClockWithImagesAppDelegate.h */ = {isa = PBXFileReference; path = AnalogClockWithImagesAppDelegate.h; sourceTree = "<group>"; };
+		E1942FAC13DF762C0044F6CD /* AnalogClockWithImagesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnalogClockWithImagesAppDelegate.m; sourceTree = "<group>"; };
+		E1942FAF13DF762C0044F6CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		E1942FB113DF762C0044F6CD /* AnalogClockWithImagesViewController.h */ = {isa = PBXFileReference; path = AnalogClockWithImagesViewController.h; sourceTree = "<group>"; };
+		E1942FB213DF762C0044F6CD /* AnalogClockWithImagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnalogClockWithImagesViewController.m; sourceTree = "<group>"; };
+		E1942FB513DF762C0044F6CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AnalogClockWithImagesViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1942F9513DF762C0044F6CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1942F9D13DF762C0044F6CD /* UIKit.framework in Frameworks */,
+				E1942F9F13DF762C0044F6CD /* Foundation.framework in Frameworks */,
+				E1942FA113DF762C0044F6CD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1942F8D13DF762C0044F6CD = {
+			isa = PBXGroup;
+			children = (
+				E1942FA213DF762C0044F6CD /* AnalogClockWithImages */,
+				E1942F9B13DF762C0044F6CD /* Frameworks */,
+				E1942F9913DF762C0044F6CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1942F9913DF762C0044F6CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1942F9813DF762C0044F6CD /* AnalogClockWithImages.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1942F9B13DF762C0044F6CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1942F9C13DF762C0044F6CD /* UIKit.framework */,
+				E1942F9E13DF762C0044F6CD /* Foundation.framework */,
+				E1942FA013DF762C0044F6CD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1942FA213DF762C0044F6CD /* AnalogClockWithImages */ = {
+			isa = PBXGroup;
+			children = (
+				E1942FAB13DF762C0044F6CD /* AnalogClockWithImagesAppDelegate.h */,
+				E1942FAC13DF762C0044F6CD /* AnalogClockWithImagesAppDelegate.m */,
+				E1942FAE13DF762C0044F6CD /* MainWindow.xib */,
+				E1942FB113DF762C0044F6CD /* AnalogClockWithImagesViewController.h */,
+				E1942FB213DF762C0044F6CD /* AnalogClockWithImagesViewController.m */,
+				E1942FB413DF762C0044F6CD /* AnalogClockWithImagesViewController.xib */,
+				E1942FA313DF762C0044F6CD /* Supporting Files */,
+			);
+			path = AnalogClockWithImages;
+			sourceTree = "<group>";
+		};
+		E1942FA313DF762C0044F6CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1942FA413DF762C0044F6CD /* AnalogClockWithImages-Info.plist */,
+				E1942FA513DF762C0044F6CD /* InfoPlist.strings */,
+				E1942FA813DF762C0044F6CD /* main.m */,
+				E1942FAA13DF762C0044F6CD /* AnalogClockWithImages-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1942F9713DF762C0044F6CD /* AnalogClockWithImages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1942FB913DF762C0044F6CD /* Build configuration list for PBXNativeTarget "AnalogClockWithImages" */;
+			buildPhases = (
+				E1942F9413DF762C0044F6CD /* Sources */,
+				E1942F9513DF762C0044F6CD /* Frameworks */,
+				E1942F9613DF762C0044F6CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnalogClockWithImages;
+			productName = AnalogClockWithImages;
+			productReference = E1942F9813DF762C0044F6CD /* AnalogClockWithImages.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1942F8F13DF762C0044F6CD /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E1942F9213DF762C0044F6CD /* Build configuration list for PBXProject "AnalogClockWithImages" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E1942F8D13DF762C0044F6CD;
+			productRefGroup = E1942F9913DF762C0044F6CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1942F9713DF762C0044F6CD /* AnalogClockWithImages */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1942F9613DF762C0044F6CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1942FA713DF762C0044F6CD /* InfoPlist.strings in Resources */,
+				E1942FB013DF762C0044F6CD /* MainWindow.xib in Resources */,
+				E1942FB613DF762C0044F6CD /* AnalogClockWithImagesViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1942F9413DF762C0044F6CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1942FA913DF762C0044F6CD /* main.m in Sources */,
+				E1942FAD13DF762C0044F6CD /* AnalogClockWithImagesAppDelegate.m in Sources */,
+				E1942FB313DF762C0044F6CD /* AnalogClockWithImagesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E1942FA513DF762C0044F6CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1942FA613DF762C0044F6CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E1942FAE13DF762C0044F6CD /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1942FAF13DF762C0044F6CD /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		E1942FB413DF762C0044F6CD /* AnalogClockWithImagesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1942FB513DF762C0044F6CD /* en */,
+			);
+			name = AnalogClockWithImagesViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1942FB713DF762C0044F6CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E1942FB813DF762C0044F6CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1942FBA13DF762C0044F6CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnalogClockWithImages/AnalogClockWithImages-Prefix.pch";
+				INFOPLIST_FILE = "AnalogClockWithImages/AnalogClockWithImages-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E1942FBB13DF762C0044F6CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnalogClockWithImages/AnalogClockWithImages-Prefix.pch";
+				INFOPLIST_FILE = "AnalogClockWithImages/AnalogClockWithImages-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1942F9213DF762C0044F6CD /* Build configuration list for PBXProject "AnalogClockWithImages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1942FB713DF762C0044F6CD /* Debug */,
+				E1942FB813DF762C0044F6CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1942FB913DF762C0044F6CD /* Build configuration list for PBXNativeTarget "AnalogClockWithImages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1942FBA13DF762C0044F6CD /* Debug */,
+				E1942FBB13DF762C0044F6CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1942F8F13DF762C0044F6CD /* Project object */;
+}
