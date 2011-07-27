@@ -16,6 +16,12 @@
 		E1942FB013DF762C0044F6CD /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1942FAE13DF762C0044F6CD /* MainWindow.xib */; };
 		E1942FB313DF762C0044F6CD /* AnalogClockWithImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1942FB213DF762C0044F6CD /* AnalogClockWithImagesViewController.m */; };
 		E1942FB613DF762C0044F6CD /* AnalogClockWithImagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1942FB413DF762C0044F6CD /* AnalogClockWithImagesViewController.xib */; };
+		E1942FBF13DF78650044F6CD /* PSAnalogClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1942FBE13DF78650044F6CD /* PSAnalogClockView.m */; };
+		E1942FC513DF7C6C0044F6CD /* clock_centre_point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1942FC013DF7C6C0044F6CD /* clock_centre_point@2x.png */; };
+		E1942FC613DF7C6C0044F6CD /* clock_hour_hand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1942FC113DF7C6C0044F6CD /* clock_hour_hand@2x.png */; };
+		E1942FC713DF7C6C0044F6CD /* clock_minute_hand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1942FC213DF7C6C0044F6CD /* clock_minute_hand@2x.png */; };
+		E1942FC913DF7C6C0044F6CD /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1942FC413DF7C6C0044F6CD /* clock@2x.png */; };
+		E1942FCB13DFAA770044F6CD /* clock_second_hand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1942FCA13DFAA770044F6CD /* clock_second_hand@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +29,7 @@
 		E1942F9C13DF762C0044F6CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E1942F9E13DF762C0044F6CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E1942FA013DF762C0044F6CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E1942FA413DF762C0044F6CD /* Info.plist */ = {isa = PBXFileReference; path = Info.plist; sourceTree = "<group>"; };
+		E1942FA413DF762C0044F6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1942FA613DF762C0044F6CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E1942FA813DF762C0044F6CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1942FAA13DF762C0044F6CD /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -33,6 +39,13 @@
 		E1942FB113DF762C0044F6CD /* AnalogClockWithImagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalogClockWithImagesViewController.h; sourceTree = "<group>"; };
 		E1942FB213DF762C0044F6CD /* AnalogClockWithImagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnalogClockWithImagesViewController.m; sourceTree = "<group>"; };
 		E1942FB513DF762C0044F6CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AnalogClockWithImagesViewController.xib; sourceTree = "<group>"; };
+		E1942FBD13DF78650044F6CD /* PSAnalogClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAnalogClockView.h; sourceTree = "<group>"; };
+		E1942FBE13DF78650044F6CD /* PSAnalogClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAnalogClockView.m; sourceTree = "<group>"; };
+		E1942FC013DF7C6C0044F6CD /* clock_centre_point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_centre_point@2x.png"; sourceTree = "<group>"; };
+		E1942FC113DF7C6C0044F6CD /* clock_hour_hand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_hour_hand@2x.png"; sourceTree = "<group>"; };
+		E1942FC213DF7C6C0044F6CD /* clock_minute_hand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_minute_hand@2x.png"; sourceTree = "<group>"; };
+		E1942FC413DF7C6C0044F6CD /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@2x.png"; sourceTree = "<group>"; };
+		E1942FCA13DFAA770044F6CD /* clock_second_hand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_second_hand@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +92,12 @@
 		E1942FA213DF762C0044F6CD /* AnalogClockWithImages */ = {
 			isa = PBXGroup;
 			children = (
+				E1942FC013DF7C6C0044F6CD /* clock_centre_point@2x.png */,
+				E1942FC113DF7C6C0044F6CD /* clock_hour_hand@2x.png */,
+				E1942FC213DF7C6C0044F6CD /* clock_minute_hand@2x.png */,
+				E1942FCA13DFAA770044F6CD /* clock_second_hand@2x.png */,
+				E1942FC413DF7C6C0044F6CD /* clock@2x.png */,
+				E1942FBC13DF783D0044F6CD /* AnalogClockView */,
 				E1942FAB13DF762C0044F6CD /* AppDelegate.h */,
 				E1942FAC13DF762C0044F6CD /* AppDelegate.m */,
 				E1942FAE13DF762C0044F6CD /* MainWindow.xib */,
@@ -99,6 +118,15 @@
 				E1942FAA13DF762C0044F6CD /* Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1942FBC13DF783D0044F6CD /* AnalogClockView */ = {
+			isa = PBXGroup;
+			children = (
+				E1942FBD13DF78650044F6CD /* PSAnalogClockView.h */,
+				E1942FBE13DF78650044F6CD /* PSAnalogClockView.m */,
+			);
+			name = AnalogClockView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +179,11 @@
 				E1942FA713DF762C0044F6CD /* InfoPlist.strings in Resources */,
 				E1942FB013DF762C0044F6CD /* MainWindow.xib in Resources */,
 				E1942FB613DF762C0044F6CD /* AnalogClockWithImagesViewController.xib in Resources */,
+				E1942FC513DF7C6C0044F6CD /* clock_centre_point@2x.png in Resources */,
+				E1942FC613DF7C6C0044F6CD /* clock_hour_hand@2x.png in Resources */,
+				E1942FC713DF7C6C0044F6CD /* clock_minute_hand@2x.png in Resources */,
+				E1942FC913DF7C6C0044F6CD /* clock@2x.png in Resources */,
+				E1942FCB13DFAA770044F6CD /* clock_second_hand@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +197,7 @@
 				E1942FA913DF762C0044F6CD /* main.m in Sources */,
 				E1942FAD13DF762C0044F6CD /* AppDelegate.m in Sources */,
 				E1942FB313DF762C0044F6CD /* AnalogClockWithImagesViewController.m in Sources */,
+				E1942FBF13DF78650044F6CD /* PSAnalogClockView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
