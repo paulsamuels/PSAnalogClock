@@ -11,19 +11,11 @@
 
 @interface AnalogClockWithImagesViewController ()
 
-@property (nonatomic, retain) PSAnalogClockView *clockView;
-
-- (void)instantiateClockAndAddImagesAfterAndDoNotStartAnimation;
-- (void)instantiateClockAndAddImagesAfterWithSomeImagesMissing;
-- (void)instantiateClockUsingADictionaryOfImages;
-- (void)instantiateClockUsingADictionaryOfImagesAndOptionsForControllingSecondHandAnimation;
-- (NSDictionary *)images;
+@property (nonatomic, strong) PSAnalogClockView *clockView;
 
 @end
 
 @implementation AnalogClockWithImagesViewController
-
-@synthesize clockView = _clockView;
 
 #pragma mark - View lifecycle
 
@@ -44,11 +36,6 @@
   
 }
 
-- (void)dealloc
-{
-  [_clockView release];
-  [super dealloc];
-}
 
 - (void)instantiateClockAndAddImagesAfterAndDoNotStartAnimation
 {
@@ -63,13 +50,10 @@
   
   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(updateClock:)];
   [analogClock addGestureRecognizer:tap];
-  [tap release]; tap = nil;
   
   self.clockView = analogClock;
   
   [analogClock updateClockTimeAnimated:YES];
-  
-  [analogClock release]; analogClock = nil;
 }
 
 - (void)updateClock:(id)sender
@@ -88,8 +72,6 @@
   [self.view addSubview:analogClock2];
   
   [analogClock2 start];
-  
-  [analogClock2 release]; analogClock2 = nil;
 }
 
 - (void)instantiateClockUsingADictionaryOfImages
@@ -100,8 +82,6 @@
   [self.view addSubview:analogClock3];
   
   [analogClock3 start];
-  
-  [analogClock3 release]; analogClock3 = nil;
 }
 
 - (void)instantiateClockUsingADictionaryOfImagesAndOptionsForControllingSecondHandAnimation
@@ -113,19 +93,17 @@
   [self.view addSubview:analogClock4];
   
   [analogClock4 start];
-  
-  [analogClock4 release]; analogClock4 = nil;
 }
 
 - (NSDictionary *)images
 {
-  return [NSDictionary dictionaryWithObjectsAndKeys:
-            [UIImage imageNamed:@"clock"], PSAnalogClockViewClockFace,
-            [UIImage imageNamed:@"clock_hour_hand"], PSAnalogClockViewHourHand,
-            [UIImage imageNamed:@"clock_minute_hand"], PSAnalogClockViewMinuteHand,
-            [UIImage imageNamed:@"clock_second_hand"], PSAnalogClockViewSecondHand,
-            [UIImage imageNamed:@"clock_centre_point"], PSAnalogClockViewCenterCap,
-             nil];
+  return @{
+            PSAnalogClockViewClockFace:  [UIImage imageNamed:@"clock"],
+            PSAnalogClockViewHourHand:   [UIImage imageNamed:@"clock_hour_hand"],
+            PSAnalogClockViewMinuteHand: [UIImage imageNamed:@"clock_minute_hand"],
+            PSAnalogClockViewSecondHand: [UIImage imageNamed:@"clock_second_hand"],
+            PSAnalogClockViewCenterCap:  [UIImage imageNamed:@"clock_centre_point"]
+         };
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

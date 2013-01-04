@@ -15,18 +15,18 @@ extern NSString * const PSAnalogClockViewSecondHand;
 extern NSString * const PSAnalogClockViewCenterCap;
 
 typedef enum {
-  PSAnalogClockViewOptionNone        = 1 << 0, // Default to PSAnalogClockViewOptionSmoothHands
-  PSAnalogClockViewOptionSmoothHands = 1 << 1, // Makes the second hand move in one continous smooth motion
-  PSAnalogClockViewOptionClunkyHands = 1 << 2, // Makes the second hand move more like a classic analog clock
+    PSAnalogClockViewOptionNone        = 1 << 0, // Default to PSAnalogClockViewOptionSmoothHands
+    PSAnalogClockViewOptionSmoothHands = 1 << 1, // Makes the second hand move in one continous smooth motion
+    PSAnalogClockViewOptionClunkyHands = 1 << 2, // Makes the second hand move more like a classic analog clock
 } PSAnalogClockViewOption;
 
 @interface PSAnalogClockView : UIView
 
-@property (nonatomic, retain) UIImage *secondHandImage;
-@property (nonatomic, retain) UIImage *minuteHandImage;
-@property (nonatomic, retain) UIImage *hourHandImage;
-@property (nonatomic, retain) UIImage *centerCapImage;
-@property (nonatomic, retain) UIImage *clockFaceImage;
+@property (nonatomic, strong) UIImage *secondHandImage;
+@property (nonatomic, strong) UIImage *minuteHandImage;
+@property (nonatomic, strong) UIImage *hourHandImage;
+@property (nonatomic, strong) UIImage *centerCapImage;
+@property (nonatomic, strong) UIImage *clockFaceImage;
 
 - (id)initWithFrame:(CGRect)frame;
 - (id)initWithFrame:(CGRect)frame andImages:(NSDictionary *)images;

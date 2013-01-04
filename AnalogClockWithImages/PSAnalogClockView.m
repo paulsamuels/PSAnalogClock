@@ -18,44 +18,23 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
 
 @interface PSAnalogClockView ()
 
-@property (nonatomic, retain) NSTimer *clockUpdateTimer;
-@property (nonatomic, retain) NSCalendar *calendar;
-@property (nonatomic, retain) NSDate *now;
+@property (nonatomic, strong) NSTimer    *clockUpdateTimer;
+@property (nonatomic, strong) NSCalendar *calendar;
+@property (nonatomic, strong) NSDate     *now;
 
-@property (nonatomic, retain) UIImageView *secondHandImageView;
-@property (nonatomic, retain) UIImageView *minuteHandImageView;
-@property (nonatomic, retain) UIImageView *hourHandImageView;
-@property (nonatomic, retain) UIImageView *clockFaceImageView;
-@property (nonatomic, retain) UIImageView *centreCapImageView;
+@property (nonatomic, strong) UIImageView *secondHandImageView;
+@property (nonatomic, strong) UIImageView *minuteHandImageView;
+@property (nonatomic, strong) UIImageView *hourHandImageView;
+@property (nonatomic, strong) UIImageView *clockFaceImageView;
+@property (nonatomic, strong) UIImageView *centreCapImageView;
 
 @property (nonatomic, assign) PSAnalogClockViewOption options;
-
-- (void)updateHoursHand;
-- (void)updateMinutesHand;
-- (void)updateSecondsHand;
-- (int)hours;
-- (int)minutes;
-- (int)seconds;
-- (void)addImageViews;
 
 @end
 
 @implementation PSAnalogClockView
 
-@synthesize secondHandImageView  = _secondHandImageView;
-@synthesize minuteHandImageView  = _minuteHandImageView;
-@synthesize hourHandImageView    = _hourHandImageView;
-@synthesize clockFaceImageView   = _clockFaceImageView;
-@synthesize centreCapImageView   = _centreCapImageView;
-
-@synthesize clockUpdateTimer     = _clockUpdateTimer;
-@synthesize calendar             = _calendar;
-@synthesize now                  = _now;
-
-@synthesize options              = _options;
-
-#pragma mark -
-#pragma mark Initializers
+#pragma mark - Initializers
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -82,12 +61,12 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
     _secondHandImageView = [[UIImageView alloc] initWithFrame:imageViewFrame];
     _centreCapImageView  = [[UIImageView alloc] initWithFrame:imageViewFrame];
     
-    if (images) {      
-      self.clockFaceImage  = [images objectForKey:PSAnalogClockViewClockFace];
-      self.hourHandImage   = [images objectForKey:PSAnalogClockViewHourHand];
-      self.minuteHandImage = [images objectForKey:PSAnalogClockViewMinuteHand];
-      self.secondHandImage = [images objectForKey:PSAnalogClockViewSecondHand];
-      self.centerCapImage  = [images objectForKey:PSAnalogClockViewCenterCap];
+    if (images) {
+      self.clockFaceImage  = images[PSAnalogClockViewClockFace];
+      self.hourHandImage   = images[PSAnalogClockViewHourHand];
+      self.minuteHandImage = images[PSAnalogClockViewMinuteHand];
+      self.secondHandImage = images[PSAnalogClockViewSecondHand];
+      self.centerCapImage  = images[PSAnalogClockViewCenterCap];
       
       [self addImageViews];
     }
@@ -95,22 +74,8 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
   return self;
 }
 
-- (void)dealloc
-{
-  [_secondHandImageView  release];
-  [_minuteHandImageView  release];
-  [_hourHandImageView    release];
-  [_clockFaceImageView   release];
-  [_centreCapImageView   release];
-  
-  [_clockUpdateTimer release];
-  [_calendar         release];
-  
-  [super dealloc];
-}
-
 - (void)addImageViews
-{  
+{
   NSArray *subViews = [self subviews];
   
   if (self.clockFaceImageView.image && ![subViews containsObject:self.clockFaceImageView]) {
@@ -130,12 +95,15 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
   }
 }
 
-#pragma mark -
-#pragma marl Start and Stop the clock
+#pragma mark - Start and Stop the clock
 
 - (void)start
 {
-	self.clockUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateClockTimeAnimated:) userInfo:nil repeats:YES];
+	self.clockUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                           target:self
+                                                         selector:@selector(updateClockTimeAnimated:)
+                                                         userInfo:nil
+                                                          repeats:YES];
   [self updateClockTimeAnimated:NO];
 }
 
@@ -150,31 +118,35 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
   
   self.now = [NSDate date];
   
+  void (^updateClocks)(void) = ^ {
+    [self updateHoursHand];
+    [self updateMinutesHand];
+    [self updateSecondsHand];
+  };
+  
   if (animated) {
-    [UIView beginAnimations:nil context:nil];
     
-    if (PSAnalogClockViewOptionNone & self.options || PSAnalogClockViewOptionSmoothHands & self.options) {
-      [UIView setAnimationDuration:1];
-      [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    } else if (PSAnalogClockViewOptionClunkyHands & self.options) {
-      [UIView setAnimationDuration:0.3];
-      [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    CGFloat duration           = 1.f;
+    UIViewAnimationCurve curve = UIViewAnimationCurveLinear;
+    
+    if (PSAnalogClockViewOptionClunkyHands & self.options) {
+      duration = 0.3f;
+      curve    = UIViewAnimationCurveEaseOut;
     }
     
-  }
-  
-  [self updateHoursHand];
-  [self updateMinutesHand];
-  [self updateSecondsHand];
-  
-  if (animated) {
-    [UIView commitAnimations];
+    [UIView animateWithDuration:duration
+                          delay:0.f
+                        options:curve
+                     animations:updateClocks
+                     completion:nil];
+  } else {
+    updateClocks();
   }
 }
 
 - (void)updateHoursHand
 {
-  if (nil == self.hourHandImage) {
+  if (!self.hourHandImage) {
     return;
   }
   
@@ -183,7 +155,7 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
   
   int hours = [self hours];
   
-  int hoursFor12HourClock = hours < 12 ? hours : hours - 12;
+  int hoursFor12HourClock = hours % 12;
   
   float rotationForHoursComponent  = hoursFor12HourClock * degreesPerHour;
   float rotationForMinuteComponent = degreesPerMinute * [self minutes];
@@ -196,9 +168,9 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
 }
 
 - (void)updateMinutesHand
-{  
-  if (nil == self.minuteHandImage) {
-    return;  
+{
+  if (!self.minuteHandImage) {
+    return;
   }
   
   int degreesPerMinute = 6;
@@ -209,8 +181,8 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
 }
 
 - (void)updateSecondsHand
-{    
-  if (nil == self.secondHandImage) {
+{
+  if (!self.secondHandImage) {
     return;
   }
   
@@ -236,8 +208,7 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
   return [[self.calendar components:NSSecondCalendarUnit fromDate:self.now] second];;
 }
 
-#pragma mark - 
-#pragma mark Setters + getters for adding clock images
+#pragma mark - Setters + getters for adding clock images
 
 - (void)setSecondHandImage:(UIImage *)secondHandImage
 {

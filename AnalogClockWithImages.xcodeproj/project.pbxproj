@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAC333661697981100810C31 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC333651697981100810C31 /* Default-568h@2x.png */; };
 		E1942F9D13DF762C0044F6CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1942F9C13DF762C0044F6CD /* UIKit.framework */; };
 		E1942F9F13DF762C0044F6CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1942F9E13DF762C0044F6CD /* Foundation.framework */; };
 		E1942FA113DF762C0044F6CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1942FA013DF762C0044F6CD /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DAC333651697981100810C31 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E1942F9813DF762C0044F6CD /* AnalogClockWithImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalogClockWithImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1942F9C13DF762C0044F6CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E1942F9E13DF762C0044F6CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,7 +42,7 @@
 		E1942FB213DF762C0044F6CD /* AnalogClockWithImagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnalogClockWithImagesViewController.m; sourceTree = "<group>"; };
 		E1942FB513DF762C0044F6CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AnalogClockWithImagesViewController.xib; sourceTree = "<group>"; };
 		E1942FBD13DF78650044F6CD /* PSAnalogClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAnalogClockView.h; sourceTree = "<group>"; };
-		E1942FBE13DF78650044F6CD /* PSAnalogClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAnalogClockView.m; sourceTree = "<group>"; };
+		E1942FBE13DF78650044F6CD /* PSAnalogClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = PSAnalogClockView.m; sourceTree = "<group>"; tabWidth = 2; };
 		E1942FC013DF7C6C0044F6CD /* clock_centre_point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_centre_point@2x.png"; sourceTree = "<group>"; };
 		E1942FC113DF7C6C0044F6CD /* clock_hour_hand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_hour_hand@2x.png"; sourceTree = "<group>"; };
 		E1942FC213DF7C6C0044F6CD /* clock_minute_hand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_minute_hand@2x.png"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		E1942F8D13DF762C0044F6CD = {
 			isa = PBXGroup;
 			children = (
+				DAC333651697981100810C31 /* Default-568h@2x.png */,
 				E1942FA213DF762C0044F6CD /* AnalogClockWithImages */,
 				E1942F9B13DF762C0044F6CD /* Frameworks */,
 				E1942F9913DF762C0044F6CD /* Products */,
@@ -184,6 +187,7 @@
 				E1942FC713DF7C6C0044F6CD /* clock_minute_hand@2x.png in Resources */,
 				E1942FC913DF7C6C0044F6CD /* clock@2x.png in Resources */,
 				E1942FCB13DFAA770044F6CD /* clock_second_hand@2x.png in Resources */,
+				DAC333661697981100810C31 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +281,10 @@
 		E1942FBA13DF762C0044F6CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AnalogClockWithImages/Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = AnalogClockWithImages/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -288,8 +294,10 @@
 		E1942FBB13DF762C0044F6CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AnalogClockWithImages/Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = AnalogClockWithImages/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -315,6 +323,7 @@
 				E1942FBB13DF762C0044F6CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
