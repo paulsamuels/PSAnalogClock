@@ -22,6 +22,7 @@ typedef enum {
 
 @interface PSAnalogClockView : UIView
 
+@property (nonatomic) BOOL isStarted;
 @property (nonatomic, strong) UIImage *secondHandImage;
 @property (nonatomic, strong) UIImage *minuteHandImage;
 @property (nonatomic, strong) UIImage *hourHandImage;

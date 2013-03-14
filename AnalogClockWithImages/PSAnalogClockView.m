@@ -99,17 +99,22 @@ NSString * const PSAnalogClockViewCenterCap  = @"center_cap";
 
 - (void)start
 {
-	self.clockUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                           target:self
-                                                         selector:@selector(updateClockTimeAnimated:)
-                                                         userInfo:nil
-                                                          repeats:YES];
-  [self updateClockTimeAnimated:NO];
+  if(!isStarted)
+  {
+  	self.clockUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                             target:self
+                                                           selector:@selector(updateClockTimeAnimated:)
+                                                           userInfo:nil
+                                                            repeats:YES];
+    [self updateClockTimeAnimated:NO];
+    isStarted = YES;
+  }
 }
 
 - (void)stop
 {
 	[self.clockUpdateTimer invalidate]; self.clockUpdateTimer = nil;
+  isStarted = NO;
 }
 
 - (void)updateClockTimeAnimated:(BOOL)animated
